@@ -1,5 +1,14 @@
-
+html,
+body {
+	@include font-smoothing(on);
+	overflow-x: hidden;
+}
 
 section {
   padding: 60px 0;
+  clear: both;
+}
+
+.cta {
+  text-align: center;
 }

@@ -1,10 +1,15 @@
 import React from 'react';
+import { Container, Row, Col } from 'reactstrap';
 
 const Footer = () => (
 	<footer>
-		<div className="container text-center">
-			Made with &#9829; by <a href="https://www.tylerb.me">Tyler Bailey</a>
-		</div>
+		<Container>
+			<Row>
+				<Col className="text-center">
+					Made with &#9829; by <a href="https://www.tylerb.me">Tyler Bailey</a>
+				</Col>
+			</Row>
+		</Container>
 	</footer>
 );
 

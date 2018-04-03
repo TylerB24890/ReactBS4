@@ -6038,8 +6038,61 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered td {
     border: 1px solid #ddd !important; } }
 
+/**
+* Collections of SCSS Mixins
+*/
+/*
+* font-smothing
+* @include font-smoothing(on);
+* @include font-smoothing(off);
+*/
+/*
+* Animate css properties
+* usage
+* scss - @include animate(color);
+*     or @include animate(color width);
+*     or @include animate(color width, 1s, linear);
+*/
+/*
+* Mixin for styling form-placeholders
+* @example scss - Usage
+*   @include placeholder {
+*    color: #333;
+*   }
+*
+*   input[type='text'],
+*   input[type='tel'],
+*   input[type='email'] {
+*     @include placeholder {
+*      color: red;
+*     }
+*   }
+*/
+.no-padding {
+  padding-left: 0;
+  padding-right: 0; }
+
+.no-left-padding {
+  padding-left: 0; }
+
+.no-right-padding {
+  padding-right: 0; }
+
+*.test {
+  border: 1px solid red; }
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; }
+
 section {
-  padding: 60px 0; }
+  padding: 60px 0;
+  clear: both; }
+
+.cta {
+  text-align: center; }
 
 #home .carousel .carousel-inner .carousel-item .item-bg {
   height: 400px; }
