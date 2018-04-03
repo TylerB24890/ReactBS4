@@ -1,12 +1,14 @@
 import React from 'react';
 
+import { Container, Row, Col } from 'reactstrap';
+
 import PageHeader from  '../Components/PageHeader';
 
 const About = () => (
 	<div id="about">
-		<div className="container-fluid">
+		<Container fluid>
 			<PageHeader headerText="About ReactJS Starter Kit" />
-		</div>
+		</Container>
 	</div>
 );
 

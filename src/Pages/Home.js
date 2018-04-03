@@ -8,7 +8,7 @@ const Home = () => (
 	<div id="home">
 		<HomeBanner />
 
-		<Container>
+		<Container fluid>
 			<PageHeader headerText="Welcome to the ReactJS Starter Kit" textAlign="center" />
 
 			<Row>

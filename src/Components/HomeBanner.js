@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import {
+	Container,
 	Carousel,
 	CarouselItem,
 	CarouselControl,
@@ -96,7 +97,9 @@ class HomeBanner extends Component {
           onExited={this.onExited}
         >
 					<div className="item-bg" style={ slideStyle }>
-          	<CarouselCaption className="text-danger" captionText={item.caption} captionHeader={item.caption} />
+						<Container fluid>
+							<CarouselCaption className="text-danger" captionText={item.caption} captionHeader={item.caption} />
+						</Container>
 					</div>
         </CarouselItem>
 			)

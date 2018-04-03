@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Row, Col } from 'reactstrap';
+
 class PageHeader extends Component {
 
 	constructor(props) {
@@ -19,13 +21,11 @@ class PageHeader extends Component {
 
 		return(
 			<section>
-				<div className="row">
-					<div className="col-md-12">
-						<div style={headerStyle}>
-							<h1>{this.state.headerText}</h1>
-						</div>
-					</div>
-				</div>
+				<Row>
+					<Col style={headerStyle}>
+						<h1>{this.state.headerText}</h1>
+					</Col>
+				</Row>
 			</section>
 		)
 	}

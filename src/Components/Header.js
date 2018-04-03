@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap';
 
 import {
+	Container,
 	Collapse,
 	Navbar,
 	NavbarToggler,
@@ -35,7 +36,7 @@ class Header extends Component {
 	render() {
 
 		return(
-			<div>
+			<Container fluid>
         <Navbar color="faded" light expand="md">
           <Link to="/" className="navbar-brand">React Starter</Link>
           <NavbarToggler onClick={this.toggle} />
@@ -76,7 +77,7 @@ class Header extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-      </div>
+      </Container>
 		)
 	}
 }

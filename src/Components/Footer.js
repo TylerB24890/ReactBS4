@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 const Footer = () => (
 	<footer>
-		<Container>
+		<Container fluid>
 			<Row>
 				<Col className="text-center">
 					Made with &#9829; by <a href="https://www.tylerb.me">Tyler Bailey</a>
