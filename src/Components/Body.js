@@ -1,18 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 
 import Home from '../Pages/Home';
 import About from '../Pages/About';
 
-class Body extends Component {
-	render() {
-		return(
-			<div>
-				<Route exact path="/" component={Home} />
-				<Route path="/about" component={About} />
-			</div>
-		)
-	}
-}
+const Body = () => (
+	<div>
+		<Route exact path="/" component={Home} />
+		<Route path="/about" component={About} />
+	</div>
+)
 
 export default Body;

@@ -16,12 +16,9 @@ class App extends Component {
 		super(props);
 
 		var pathArray = window.location.href.split( '/' );
-		var protocol = pathArray[0];
-		var host = pathArray[2];
 
 		this.state = {
-			siteUrl: protocol + '//' + host,
-			isTouch: !!("undefined" !== typeof document.documentElement.ontouchstart),
+			siteUrl: pathArray[0] + '//' + pathArray[2]
 		}
 	}
 
@@ -33,6 +30,7 @@ class App extends Component {
 	}
 
   render() {
+
     return (
 			<Router>
 				<div className="app-container">

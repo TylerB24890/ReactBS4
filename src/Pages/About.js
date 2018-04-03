@@ -8,6 +8,12 @@ const About = () => (
 	<div id="about">
 		<Container fluid>
 			<PageHeader headerText="About ReactJS Starter Kit" />
+
+			<Row>
+				<Col>
+					<h4>This is the about page content.</h4>
+				</Col>
+			</Row>
 		</Container>
 	</div>
 );

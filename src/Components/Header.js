@@ -43,22 +43,22 @@ class Header extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
 
-							<IndexLinkContainer to="/">
-                <NavLink href="/">Home</NavLink>
-              </IndexLinkContainer>
+							<NavItem>
+								<IndexLinkContainer to="/">
+	                <NavLink href="/">Home</NavLink>
+	              </IndexLinkContainer>
+							</NavItem>
 
-							<LinkContainer to="/about">
-									<NavLink href="/about">About</NavLink>
-              </LinkContainer>
-
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-              </NavItem>
+							<NavItem>
+								<LinkContainer to="/about">
+										<NavLink href="/about">About</NavLink>
+	              </LinkContainer>
+							</NavItem>
 
 							{ /* Dropdown Example */ }
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Dropdown
+                  Dropdown Example
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
