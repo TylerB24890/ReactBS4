@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap';
 
 import {
 	Collapse,
@@ -19,9 +20,12 @@ class Header extends Component {
 	constructor(props) {
 		super(props);
 
+		console.log(props);
+
 		this.toggle = this.toggle.bind(this);
 		this.state = {
-			isOpen: false
+			isOpen: false,
+			location: this.props.location.pathname
 		};
 	}
 
@@ -32,6 +36,7 @@ class Header extends Component {
 	}
 
 	render() {
+
 		return(
 			<div>
         <Navbar color="faded" light expand="md">
@@ -40,12 +45,14 @@ class Header extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
 
-							{ /* Use <Link to="" className="nav-link"> for React Router links */ }
-              <NavItem>
-                <Link to="/about" className="nav-link">About</Link>
-              </NavItem>
+							<IndexLinkContainer to="/">
+                <NavLink href="/">Home</NavLink>
+              </IndexLinkContainer>
 
-							{ /* Use <NavLink href=""> for external links} */ }
+							<LinkContainer to="/about">
+									<NavLink href="/about">About</NavLink>
+              </LinkContainer>
+
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
               </NavItem>
@@ -77,4 +84,4 @@ class Header extends Component {
 	}
 }
 
-export default Header;
+export default withRouter(Header);
