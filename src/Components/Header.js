@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap';
 
 import {
@@ -20,12 +20,9 @@ class Header extends Component {
 	constructor(props) {
 		super(props);
 
-		console.log(props);
-
 		this.toggle = this.toggle.bind(this);
 		this.state = {
 			isOpen: false,
-			location: this.props.location.pathname
 		};
 	}
 
@@ -84,4 +81,4 @@ class Header extends Component {
 	}
 }
 
-export default withRouter(Header);
+export default Header;
