@@ -1,8 +1,12 @@
 import React from 'react';
 
+import PageHeader from  '../Components/PageHeader';
+
 const About = () => (
-	<div>
-		<h1>This is About!</h1>
+	<div id="about">
+		<div className="container-fluid">
+			<PageHeader headerText="About ReactJS Starter Kit" />
+		</div>
 	</div>
 );
 

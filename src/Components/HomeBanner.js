@@ -40,35 +40,43 @@ class HomeBanner extends Component {
     this.onExited = this.onExited.bind(this);
 	}
 
+	// On mouse exit
 	onExiting() {
     this.animating = true;
   }
 
+	// On mouse enter
   onExited() {
     this.animating = false;
   }
 
+	// Animate to next slide
   next() {
     if (this.animating) return;
     const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
     this.setState({ activeIndex: nextIndex });
   }
 
+	// Animate to previous slide
   previous() {
     if (this.animating) return;
     const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
     this.setState({ activeIndex: nextIndex });
   }
 
+	// Go to selected slide
   goToIndex(newIndex) {
     if (this.animating) return;
     this.setState({ activeIndex: newIndex });
   }
 
+	// Render the carousel slides
 	render() {
 
+		// Get the active slide
 		const { activeIndex } = this.state;
 
+		// Set the slides with custom background image
 		const slides = items.map((item) => {
 			// Set Inline Styles
 			var slideStyle = {
@@ -91,6 +99,7 @@ class HomeBanner extends Component {
 			)
 		});
 
+		// Render the carousel
 		return (
 			<div>
 				<Carousel
