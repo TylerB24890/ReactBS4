@@ -5,6 +5,9 @@
   "dependencies": {
     "bootstrap": "^4.0.0",
     "jquery": "^3.3.1",
+    "mobx": "^4.1.1",
+    "mobx-react": "^5.0.0",
+    "mobx-react-router": "^4.0.2",
     "node-sass-chokidar": "^1.2.2",
     "npm-run-all": "^4.1.2",
     "popper.js": "^1.14.2",
@@ -18,10 +21,14 @@
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles/ -o src/styles/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles/ -o src/styles --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start-js": "react-app-rewired start",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-app-rewired eject"
+  },
+  "devDependencies": {
+    "react-app-rewired": "^1.5.0",
+    "react-app-rewire-mobx": "^1.0.8"
   }
 }

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 import 'popper.js/dist/umd/popper.js';
 import $ from 'jquery';
-import 'bootstrap';
+import 'bootstrap/dist/js/bootstrap.min.js';
 import './styles/index.css';
 
 import Header from './Components/Header';
@@ -30,15 +29,12 @@ class App extends Component {
 	}
 
   render() {
-
     return (
-			<Router>
-				<div className="app-container">
-					<Header />
-					<Body />
-					<Footer />
-				</div>
-			</Router>
+			<div className="app-container">
+				<Header location={this.props.location}/>
+				<Body />
+				<Footer />
+			</div>
     );
   }
 }
