@@ -11,7 +11,13 @@ const About = () => (
 
 			<Row>
 				<Col>
-					<h4>This is the about page content.</h4>
+					<h4>Tips</h4>
+				</Col>
+			</Row>
+
+			<Row>
+				<Col>
+					You can use &lt;Col&gt;&lt;/Col&gt; to render equal columns as long as it's wrapped in a &lt;Row&gt;&lt;/Row&gt;
 				</Col>
 			</Row>
 		</Container>
